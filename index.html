@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', sans-serif; background: #0f1117; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; }
+.badge { background: #1a2a1a; color: #4ade80; border: 1px solid #22c55e33; padding: 6px 16px; border-radius: 20px; font-size: 13px; margin-bottom: 1.5rem; display: inline-flex; align-items: center; gap: 8px; }
+.dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+h1 { font-size: 42px; font-weight: 700; margin-bottom: 1rem; text-align: center; background: linear-gradient(135deg, #fff 0%, #888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+p { color: #888; font-size: 16px; text-align: center; max-width: 480px; line-height: 1.7; margin-bottom: 2.5rem; }
+.cards { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem; }
+.card { background: #1a1d27; border: 1px solid #2a2d3a; border-radius: 12px; padding: 1.25rem 1.5rem; min-width: 140px; text-align: center; }
+.card-icon { font-size: 24px; margin-bottom: 8px; }
+.card-label { font-size: 12px; color: #666; margin-bottom: 4px; }
+.card-val { font-size: 15px; font-weight: 600; color: #fff; }
+.footer { color: #444; font-size: 13px; border-top: 1px solid #2a2d3a; padding-top: 1.5rem; width: 100%; max-width: 500px; text-align: center; }
+.green { color: #22c55e; }
+</style>
+</head>
+<body>
+<div class="badge"><span class="dot"></span> Deployed via Jenkins CI/CD</div>
+<h1>Task Project</h1>
+<p>A simple web application deployed on an AWS EC2 Linux server using Nginx, automated with a Jenkins pipeline.</p>
+<div class="cards">
+  <div class="card"><div class="card-icon">☁️</div><div class="card-label">Server</div><div class="card-val">AWS EC2</div></div>
+  <div class="card"><div class="card-icon">🌐</div><div class="card-label">Web server</div><div class="card-val">Nginx</div></div>
+  <div class="card"><div class="card-icon">⚙️</div><div class="card-label">CI/CD</div><div class="card-val">Jenkins</div></div>
+  <div class="card"><div class="card-icon">📊</div><div class="card-label">Monitoring</div><div class="card-val">Grafana</div></div>
+</div>
+<div class="footer">Built by Akshat · IIT Kharagpur · <span class="green">●</span> Server online</div>
+</body>
+</html>
